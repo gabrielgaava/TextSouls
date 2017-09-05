@@ -1,0 +1,29 @@
+//Sistema simples de combate em rpg.
+//Implementar:
+
+//	-Agilidade()
+//	-Dano máximo e mínimo
+// 	-Crítico()
+//	-Defesa
+//	-Miss()
+//  	-Tipos de inimigos diferentes
+//	-Mana
+//	-Classes
+//	-Equips
+//	-Gold
+//	-Exp and Levels
+//	-Areas?
+
+
+
+Paradinha de criar Biblioteca para as Funções
+
+Sistema de Progressão:  Divisão de Áreas 
+
+Sisite de Itens e Inventario
+
+Sistema de Level e XP
+
+Sistema de Combata e calculo de Dano
+
+Sistema de Ouro
