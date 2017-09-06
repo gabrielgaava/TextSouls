@@ -32,19 +32,82 @@
 //   -Areas:
 //       -How will they differ and what to do ?
 
+// Function to calculate the XP and Check de LvL
+int Exp_Checker(int * xp_player, int * lvl_player){
 
+    //Level 2
+    if(*xp_player >= 100 && *xp_player < 200) {
+      *lvl_player=2; printf("\nYou've gone up to level 2!");
+      //All Stats of the class that will be incresed all levels
+      }
 
+    //Level 3
+    if(*xp_player >= 200 && *xp_player < 350) {
+      *lvl_player=3; printf("\nYou've gone up to level 3!");
+      //All Stats of the class that will be incresed all levels
+    }
+
+    //Level 4
+    if(*xp_player >= 350 && *xp_player < 500) {
+      *lvl_player=4; printf("\nYou've gone up to level 4!");
+      //All Stats of the class that will be incresed all levels
+    }
+
+}
 //Starting the main function.
 int main(int argc, char const *argv[]) {
     //Starting the random factor.
     srand(time(NULL));
+
+    //Creating the struct of the classes.
+    typedef struct{
+      char name[25];
+      int Hp,MaxHp,Mana,MaxMana,Atk,Def,SpAtk,Agi,Acc;
+    }CLASSES;
+    CLASSES classes[5];
+
+    //Getting the classes Defined.
+
+    //Classe 1(0) - Neutron Mage.
+    strcpy(classes[0].nome,"Neutron Mage");
+    classes[0].Hp = 100;
+    classes[0].MaxHp = 100;
+    classes[0].Mana = 500;
+    classes[0].MaxMana = 500;
+    classes[0].Atk = 40;
+    classes[0].Def = 80;
+    classes[0].Acc = 95;
+    classes[0].SpAtk = 150;
+    classes[0].Agi = 60;
+    /*Skills:
+        - Pulsar storm: 2x the special atk damage. Mana required: High.
+        - Krypton reborn: feeds on the enemie's mana(small quantity) while inflicting medium damage. Mana required: Low.
+        - Firewood: Heals half the damage inflicted upon himself. Mana required: Medium.
+        -Obs: If inflicted with two special atk, this character will regain it's full Mana.
+    */
+
+    //Creating the struct of the enemies.
+    typedef struct{
+      char nome[25];
+      int Hp,Maxhp,Acc,Atk,Def,SpAtk,Agi;
+    }INIMIGOS;
+
+    //Getting enemies defined.
+    //Enemy 1
+    strcpy(inimigos[0].nome,"Enchanted Raven");
+    inimigos[0].Hp = 99;
+    inimigos[0].MaxHp = 99;
+    inimigos[0].Atk = 10;
+    inimigos[0].Def = 15;
+    inimigos[0].Acc = 70;
+    inimigos[0].SpAtk = 30;
 
     //Creating the variables.
     char name_player[50][50]; //Player name, being 50 characters and maximum of 50 names.
 
     FILE *save; // save/load file
 
-    int load_menu, NG;
+    int load_menu,NG,class_select;
 
     //Main Menu
     do{
@@ -67,6 +130,15 @@ int main(int argc, char const *argv[]) {
         puts("");
         system("cls");
         printf("The name you entered is : %s\n",name_player[NG]);
+        system("cls");
+        printf("0-\n**************\nNeutron Mage\n**************\n\nMaxHP: %i\nMana: %i\nBase Atk: %i\nBase Def: %i\nAcc: %i\nSpAtk: %i\nAgi: %i\n\n",classes[0].maxhp,classes[0].mana,classes[0].atk,classes[0].def,classes[0].acc,classes[0].spatk,classes[0].agi);
+        puts("Skills:\nA-Pulsar Storm: 2x the SPatk damage. Costs 50 mana.\nB-Krypton Reborn: feeds on the enemie's fear inflicting damage. Costs 20 mana.\nC-Firewood: Heals half the damage inflicted upon himself.Costs 200 mana.\nPassive: If inflicted by two special atks, this character will regain full mana.\n\n");
+        scanf("%i",&class_select);
+
+        //Game Mechanics as a Mage.
+
+
+
     }
 
     //Load game (gonna take some time go get here).
