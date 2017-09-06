@@ -41,19 +41,19 @@ int Exp_Checker(int * xp_player, int * lvl_player){
     //Level 2
     if(*xp_player >= 100 && *xp_player < 200) {
       *lvl_player=2; printf("\nYou've gone up to level 2!");
-      //All Stats of the class that will be incresed all levels
+      //All Stats of the class that will be incresed at this level
       }
 
     //Level 3
     if(*xp_player >= 200 && *xp_player < 350) {
       *lvl_player=3; printf("\nYou've gone up to level 3!");
-      //All Stats of the class that will be incresed all levels
+      //All Stats of the class that will be incresed at this level
     }
 
     //Level 4
     if(*xp_player >= 350 && *xp_player < 500) {
       *lvl_player=4; printf("\nYou've gone up to level 4!");
-      //All Stats of the class that will be incresed all levels
+      //All Stats of the class that will be incresed at this level
     }
 
 }
@@ -73,12 +73,16 @@ int main(int argc, char const *argv[]) {
 
     //Main Menu
     do{
+
       puts("Welcome to:");
       puts("******************\nTextSouls\n******************");
       puts("");
       puts("1-New Game\n2-Load Game");
       scanf("%d",&load_menu);
+      system("cls");//Clear screen command, pretty basic.
+
     }while(load_menu != 1 && load_menu !=2 );
+    
     system("cls");//Clear screen command, pretty basic.
 
     //New game
