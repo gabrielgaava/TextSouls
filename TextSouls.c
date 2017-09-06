@@ -52,32 +52,6 @@ int Exp_Checker(int * xp_player, int * lvl_player){
       *lvl_player=4; printf("\nYou've gone up to level 4!");
       //All Stats of the class that will be incresed all levels
     }
-
-
-// Function to calculate the XP and Check de LvL
-int Exp_Checker(int * xp_player, int * lvl_player){
-
-    //Level 2
-    if(*xp_player >= 100 && *xp_player < 200) {
-      *lvl_player=2; printf("\nYou've gone up to level 2!");
-      //All Stats of the class that will be incresed at this level
-      }
-
-    //Level 3
-    if(*xp_player >= 200 && *xp_player < 350) {
-      *lvl_player=3; printf("\nYou've gone up to level 3!");
-      //All Stats of the class that will be incresed at this level
-    }
-
-    //Level 4
-    if(*xp_player >= 350 && *xp_player < 500) {
-      *lvl_player=4; printf("\nYou've gone up to level 4!");
-      //All Stats of the class that will be incresed at this level
-    }
-
-}
-
-
 //Starting the main function.
 int main(int argc, char const *argv[]) {
     //Starting the random factor.
